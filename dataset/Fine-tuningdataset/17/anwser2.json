@@ -1,0 +1,33 @@
+{
+    "task": "Place the apples in the basket and hand the basket to the user",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "apple",
+          "parts": [
+            {
+              "part": "surface",
+              "color": "red"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "apple"
+      },
+      {
+        "step": 3,
+        "action": "place_object",
+        "place_position": "basket"
+      },
+      {
+        "step": 4,
+        "action": "grasp_object",
+        "grasp_target": "basket handle"
+      }
+    ]
+}

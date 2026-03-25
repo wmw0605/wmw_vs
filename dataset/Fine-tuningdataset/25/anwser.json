@@ -1,0 +1,91 @@
+{
+    "task": "Place the fruit knife beside the vase, place the apple in the plate, and hand over the plate",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "knife",
+          "parts": [
+            {
+              "part": "handle",
+              "color": "green"
+            },
+            {
+              "part": "blade",
+              "color": "silver"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "knife handle"
+      },
+      {
+        "step": 3,
+        "action": "detect_object",
+        "object": {
+          "name": "vase",
+          "parts": [
+            {
+              "part": "body",
+              "color": "light blue"
+            }
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "action": "place_object",
+        "place_position": "beside the vase"
+      },
+      {
+        "step": 5,
+        "action": "detect_object",
+        "object": {
+          "name": "apple",
+          "parts": [
+            {
+              "part": "body",
+              "color": "red"
+            }
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "action": "grasp_object",
+        "grasp_target": "apple"
+      },
+      {
+        "step": 7,
+        "action": "detect_object",
+        "object": {
+          "name": "plate",
+          "parts": [
+            {
+              "part": "body",
+              "color": "white"
+            }
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "action": "place_object",
+        "place_position": "plate"
+      },
+      {
+        "step": 9,
+        "action": "grasp_object",
+        "grasp_target": "plate"
+      },
+      {
+        "step": 10,
+        "action": "handover_object"
+      }
+    ]
+  }
+  

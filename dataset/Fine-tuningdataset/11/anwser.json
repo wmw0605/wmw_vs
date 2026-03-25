@@ -1,0 +1,32 @@
+{
+    "task": "Hand over the basket with tools",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "basket",
+          "parts": [
+            {
+              "part": "handle",
+              "color": "light brown"
+            },
+            {
+              "part": "body",
+              "description": "includes hammer, screwdriver, and knife"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "basket handle"
+      },
+      {
+        "step": 3,
+        "action": "handover_object"
+      }
+    ]
+  }
+  

@@ -1,0 +1,32 @@
+{
+    "task": "Hand over the small vase with plant",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "vase",
+          "parts": [
+            {
+              "part": "base",
+              "color": "light blue"
+            },
+            {
+              "part": "plant",
+              "description": "small green plant growing from the top"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "vase base"
+      },
+      {
+        "step": 3,
+        "action": "handover_object"
+      }
+    ]
+  }
+  

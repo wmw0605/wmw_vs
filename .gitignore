@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Training outputs and logs
+outputs/runs/
+outputs/checkpoint-*/
+
+# Model artifacts
+models/*/adapter_model.safetensors
+models/*/*.bin
+models/*/*.pt
+models/*/trainer_state.json
+models/*/optimizer.pt
+models/*/scheduler.pt
+models/*/rng_state.pth
+
+# Local runtime files
+shared_coords.json
+vlm_detection_result.png
+final_segmentation_result.png
+pure_mask.png

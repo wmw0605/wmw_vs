@@ -1,0 +1,79 @@
+{
+    "task": "Place food items in the basket and leave the scissors on the table",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "apple",
+          "parts": [
+            {
+              "part": "body",
+              "color": "red"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "apple"
+      },
+      {
+        "step": 3,
+        "action": "place_object",
+        "place_position": "basket"
+      },
+      {
+        "step": 4,
+        "action": "detect_object",
+        "object": {
+          "name": "banana",
+          "parts": [
+            {
+              "part": "peel",
+              "color": "yellow"
+            }
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "action": "grasp_object",
+        "grasp_target": "banana"
+      },
+      {
+        "step": 6,
+        "action": "place_object",
+        "place_position": "basket"
+      },
+      {
+        "step": 7,
+        "action": "detect_object",
+        "object": {
+          "name": "carrot",
+          "parts": [
+            {
+              "part": "body",
+              "color": "orange"
+            },
+            {
+              "part": "leaves",
+              "color": "green"
+            }
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "action": "grasp_object",
+        "grasp_target": "carrot body"
+      },
+      {
+        "step": 9,
+        "action": "place_object",
+        "place_position": "basket"
+      }
+    ]
+  }
+  

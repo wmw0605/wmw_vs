@@ -1,0 +1,32 @@
+{
+    "task": "Hand over the drink",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "cup",
+          "parts": [
+            {
+              "part": "cup body",
+              "color": "green"
+            },
+            {
+              "part": "lid",
+              "color": "beige"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "cup body"
+      },
+      {
+        "step": 3,
+        "action": "handover_object"
+      }
+    ]
+  }
+  

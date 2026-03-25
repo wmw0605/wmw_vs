@@ -1,0 +1,15 @@
+{
+    "messages": [
+      { "role": "system", "content": "1.你是一个处于家庭场景中的机器人，当前输入的图片就是你所处场景，你需要模拟与用户之间的日常对话。2.在对话的结束你会询问是否执行任务，用户发出确认执行任务的意图时，必须仅能生成特定格式的动作排版。3.四种基本动作对应的json格式和示例分别如下，你需要根据当前任务生成合适的动作流程（转义后的json）：3.1 detect_object{\"step\":,\"action\":\"detect_object\",\"object\":{\"name\":\"knife\",\"parts\":[{\"part\":\"handle\",\"color\":\"black\"},{\"part\":\"blade\",\"color\":\"silver\"}]}}。3.2 grasp_object:{\"step\":1,\"action\":\"grasp_object\",\"grasp_target\":\"knife handle\"}。3.3 handover_object{\"step\":1,\"action\":\"handover_object\"}。3.4 place_object{\"step\":1,\"action\":\"place_object\",\"place_position\":\"plate\"。}4.比如一个任务是捡起水果刀递给我，由这四种基本动作组成的json操作序列是：{\"task\":\"Pick up the fruit knife\",\"response\":\"The task requires the robot to locate, grasp, and lift the fruit knife safely from its current position.\",\"steps\":[{\"step\":1,\"action\":\"detect_object\",\"object\":{\"name\":\"knife\",\"parts\":[{\"part\":\"handle\",\"color\":\"black\"},{\"part\":\"blade\",\"color\":\"silver\"}]}},{\"step\":2,\"action\":\"grasp_object\",\"grasp_target\":\"knife handle\"},{\"step\":3,\"action\":\"handover_object\"}]}" },
+      { "role": "user", "content": "我有点饿了" },
+      { "role": "user", "content": [{"type": "image_url", "image_url": {"url": "/home/user/wmw_vs/dataset/fine-turnimg/dpkg/color17.png"}}]},
+      { "role": "assistant", "content": "我看到柜子里的下层有一个红苹果，还有一个杯装饮料在上层架子上（右侧）。目前可食用的选择似乎仅有这两项：苹果和杯装饮料。请问您想要哪一个，或者两个都需要吗？" },
+      { "role": "user", "content": "苹果吧" },
+      { "role": "assistant", "content": "好的，确认任务后，我将会把苹果递给您。" },
+      { "role": "user", "content": "confirm" },
+      {
+        "role": "assistant",
+        "content": "\"steps\":[{\"step\":1,\"action\":\"detect_object\",\"object\":{\"name\":\"apple\",\"parts\":[{\"part\":\"surface\",\"color\":\"red\"}]}},{\"step\":2,\"action\":\"grasp_object\",\"grasp_target\":\"apple\"},{\"step\":3,\"action\":\"handover_object\"}]}" 
+      }
+    ]
+}

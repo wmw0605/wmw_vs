@@ -1,0 +1,27 @@
+{
+  "task": "Hand over the mug with water",
+  "steps": [{
+      "step": 1,
+      "action": "detect_object",
+      "object": {
+        "name": "mug",
+        "parts": 
+        [{ 
+            "part": "body",
+            "color": "white"
+          },{
+            "part": "handle",
+            "color": "white"
+        }]
+      }
+    },{
+      "step": 2,
+      "action": "grasp_object",
+      "grasp_target": "mug body"
+    },{
+      "step": 3,
+      "action": "handover_object"
+    }
+  ]
+}
+  

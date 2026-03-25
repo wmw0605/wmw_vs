@@ -1,0 +1,54 @@
+[
+  {
+    "id": "skill_01",
+    "name": "6-Dof 抓取",
+    "description": "基础拾取动作，适合抓取物体场景。机械臂通过二指夹爪在三维空间内从任意姿态接近并夹紧目标。适用于拿取、拾起、握住物体，如马克杯、水果、剪刀等，尤其能处理侧向抓取或有障碍物遮挡的情况。",
+    "parameters": {
+        "target_object": "string-描述：目标抓取对象",
+        "object_position": "-描述：目标物体对象的位置"
+    },
+    "function_call": "robot.grasp_6dof(target_object, object_position)"
+  },
+  {
+    "id": "skill_02",
+    "name": "定点放置",
+    "description": "末端释放动作。在已抓取物体的前提下，将物体精确移动到目标坐标或容器上方，并张开夹爪释放。常用于‘递给我’、‘放回原处’、‘存放到篮子里’或完成递送任务的最后一步。",
+    "parameters": {
+      "xyz_coords": "array-描述：物体放置坐标（x, y, z）"
+    },
+    "function_call": "robot.place_at(xyz_coords)"
+  },
+  {
+    "id": "skill_04",
+    "name": "倾倒容器",
+    "description": "容器清理动作。仅用于将容器内的现有残留物（如废水、杂物）倒出以清空容器。注意：此动作不是为了‘盛装’或‘接水’，而是为了‘排空’。只有在明确需要排空容器或清理容器内部时才调用。",
+    "parameters": {
+        "tilt_angle": "int-描述：倾倒角度",
+        "tilt_speed": "float-描述：倾倒速度",
+        "start_position": "array-描述：开始倾倒的位置"
+    },
+    "function_call": "robot.pour_container(tilt_angle, tilt_speed, start_position)"
+  },
+  {
+    "id": "skill_05",
+    "name": "垂直按压",
+    "description": "机械臂末端夹爪闭合，沿垂直向下按压开关。适用于按压机器开关的场景。",
+    "parameters": {
+      "target_point": "array-描述：按压目标的中心坐标 [x, y, z]",
+      "pressure_force": "float-描述：施加的压力值（单位：N）",
+      "press_duration": "float-描述：按压持续时间（单位：秒）"
+    },
+    "function_call": "robot.vertical_press(target_point, pressure_force, press_duration)"
+  },
+  {
+    "id": "skill_06",
+    "name": "末端旋转",
+    "description": "轴向扭转动作。在保持当前位置不变的情况下，控制机械臂末端（J6/J7轴）进行旋转。适用于‘拧松/拧紧瓶盖’、‘转动旋钮’、‘搅拌杯中液体’、‘调整物体朝向’或‘模拟钥匙开锁’等旋转类任务。",
+    "parameters": {
+      "rotation_angle": "float-描述：旋转角度（单位：度，正值顺时针，负值逆时针）",
+      "rotation_speed": "float-描述：旋转速度（单位：度/秒）",
+      "is_continuous": "bool-描述：是否持续旋转（如搅拌时设为True）"
+    },
+    "function_call": "robot.end_effector_rotate(rotation_angle, rotation_speed, is_continuous)"
+  }
+]

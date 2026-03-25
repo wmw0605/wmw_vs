@@ -1,0 +1,28 @@
+{
+    "task": "Locate and hand over the mouse",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "mouse_(computer_equipment)",
+          "parts": [
+            {
+              "part": "body",
+              "color": "black"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "mouse_(computer_equipment)"
+      },
+      {
+        "step": 3,
+        "action": "handover_object"
+      }
+    ]
+}
+  

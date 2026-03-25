@@ -1,0 +1,32 @@
+{
+    "task": "Hand over the black and orange scissors",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "scissors",
+          "parts": [
+            {
+              "part": "handle",
+              "color": "black"
+            },
+            {
+              "part": "blades",
+              "color": "silver"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "scissors handle"
+      },
+      {
+        "step": 3,
+        "action": "handover_object"
+      }
+    ]
+  }
+  

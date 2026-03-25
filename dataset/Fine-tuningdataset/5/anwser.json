@@ -1,0 +1,32 @@
+{
+    "task": "Hand over the hammer",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "hammer",
+          "parts": [
+            {
+              "part": "handle",
+              "color": "light wood"
+            },
+            {
+              "part": "head",
+              "color": "silver"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "hammer head"
+      },
+      {
+        "step": 3,
+        "action": "handover_object"
+      }
+    ]
+  }
+  

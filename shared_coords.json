@@ -1,0 +1,70 @@
+{
+    "image_path": "/home/user/wmw_vs/123.jpg",
+    "targets": [
+        {
+            "label": "star_initial_position",
+            "bbox": [
+                512,
+                1708,
+                803,
+                2009
+            ],
+            "point": [
+                651,
+                1840
+            ]
+        },
+        {
+            "label": "cube_red",
+            "bbox": [
+                2159,
+                2227,
+                2785,
+                2866
+            ],
+            "point": [
+                2417,
+                2550
+            ]
+        },
+        {
+            "label": "cube_yellow",
+            "bbox": [
+                1356,
+                962,
+                1868,
+                1539
+            ],
+            "point": [
+                1573,
+                1244
+            ]
+        },
+        {
+            "label": "cube_blue",
+            "bbox": [
+                2761,
+                1373,
+                3265,
+                1905
+            ],
+            "point": [
+                3002,
+                1644
+            ]
+        },
+        {
+            "label": "cube_green",
+            "bbox": [
+                233,
+                2249,
+                983,
+                2842
+            ],
+            "point": [
+                537,
+                2550
+            ]
+        }
+    ]
+}

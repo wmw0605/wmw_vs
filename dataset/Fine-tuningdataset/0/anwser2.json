@@ -1,0 +1,31 @@
+{
+  "task": "Hand over the screwdriver",
+  "steps": [
+    {
+      "step": 1,
+      "action": "detect_object",
+      "object": {
+        "name": "screwdriver",
+        "parts": [
+          {
+            "part": "handle",
+            "color": "black and orange"
+          },
+          {
+            "part": "shaft",
+            "color": "silver"
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": "grasp_object",
+      "grasp_target": "screwdriver handle"
+    },
+    {
+      "step": 3,
+      "action": "handover_object"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+    "task": "Hand over the plate with the spoon after removing the banana",
+    "steps": [
+      {
+        "step": 1,
+        "action": "detect_object",
+        "object": {
+          "name": "banana",
+          "parts": [
+            {
+              "part": "peel",
+              "color": "yellow"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "action": "grasp_object",
+        "grasp_target": "banana"
+      },
+      {
+        "step": 3,
+        "action": "place_object",
+        "place_position": "table"
+      },
+      {
+        "step": 4,
+        "action": "detect_object",
+        "object": {
+          "name": "plate",
+          "parts": [
+            {
+              "part": "body",
+              "color": "white"
+            }
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "action": "grasp_object",
+        "grasp_target": "plate"
+      },
+      {
+        "step": 6,
+        "action": "handover_object"
+      }
+    ]
+  }
+  

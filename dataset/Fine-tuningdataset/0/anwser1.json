@@ -1,0 +1,31 @@
+{
+    "task": "Pick up the pen",
+    "steps": [
+        {
+            "step": 1,
+            "action": "detect_object",
+            "object": {
+                "name": "pen",
+                "parts": [
+                    {
+                        "part": "body",
+                        "color": "black"
+                    },
+                    {
+                        "part": "cap",
+                        "color": "black"
+                    }
+                ]
+            }
+        },
+        {
+            "step": 2,
+            "action": "grasp_object",
+            "grasp_target": "pen"
+        },
+        {
+            "step": 3,
+            "action": "handover_object"
+        }
+    ]
+}
